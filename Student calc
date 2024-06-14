@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class stcalc {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("####### STUDENT GRADE CALCULATOR #######");
+        System.out.println("PLEASE ENTER THE NUMBER OF SUBJECTS");
+        int a=sc.nextInt();
+        int total=0;
+        System.out.println("ENTER THE MARKS OBTAINED IN "+a+"SUBJECTS RESPECTIVELY");
+        for(int i=0;i<a;i++){
+            int marks= sc.nextInt();
+            total=total+marks;
+        }
+        // p is avg percentage
+        double p=(double)total/a;
+        String Grade;
+        if(p>=90){
+            Grade="your grade is A+";
+        }
+        else if(p>=80){
+            Grade= "your grade is A";
+        }
+        else if(p>=70){
+            Grade= "your grade is B";
+        }
+        else if(p>=60){
+            Grade="your grade is C";
+        }
+        else if(p>=50){
+            Grade="your grade is D";
+        }
+        else if(p>=40){
+            Grade="your grade is E";
+        }
+        else{
+            Grade="FAIL";
+        }
+        System.out.println("your total marks is=" +total);
+        System.out.println("your percentage is="+p+"%");
+        System.out.println("your grade is =" +Grade);
+
+        
+    }
+}
